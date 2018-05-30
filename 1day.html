@@ -1,0 +1,51 @@
+<h1>자바스크립트</h1>
+<ol>
+ <li>단일 스레드 실행구조</li>
+ <li>어느 한순간에는 단 하나의 작업만 실행할 수 있다.</li>
+</ol>
+<h1>호이스팅 : 메모리에 공간을 미리 할당한다.</h1>
+<ol>
+ <li>전역 실행 컨텍스트 만들어진다</li>
+ <li>선언적 방식의 함수가 먼저 실행 컨텍스트의 메서드 형태로 만들어진다</li>
+ <li>var 키워드가 사용된 변수가 미리 만들어진다. = 값이 할당 되진 않는다</li>
+</ol>
+<h2>실행 컨텍스트 Execution Context</h2>
+<ol>
+ <li>자바스크립트 코드가 실행되는 환경 = 일종의 객체</li>
+ <li>처음 자바스크립트 코드가 실행될 때 전역 실행 컨텍스트에서 실행된다</li>
+ <li>함수가 호출될 때마다 새로운 실행 컨텍스트가 생선되어 스택에 추가되고, 제어권은 새롭게 생성된 컨첵스트로 이동한다.</li>
+</ol>
+<h1>var</h1>
+<p>var를 여러번 사용하여 변수를 할당하는것은 = 값을 새로 부여한다.</p>
+<h1>산술 연산자의 암시적 형변환</h1>
+<p>1+'2';//12 더할때는 문자열이 있으면 둘다 문자열로 인식한다. typeof = string</p>
+<p>1-'2';//-1 뺄때는 문자열이 있어도 number로 인식한다. typeof = number</p>
+<p>parseInt('123abc'); // 123</p>
+<p>parseInt('abc123'); // NaN</p>
+<h1>parseInt()</h1>
+<p>문자열의 앞부분이 숫자로 시작할 경우 변환할 수 있는 부분까지 변환한다.</p>
+<p>기본 리턴값 : NaN</p>
+<p>parseInt(); // NaN</p>
+<p>parseInt('abc'); // NaN</p>
+<h1>Number()</h1>
+<p>전체 문자열을 숫자로 변환할 수 있는 가를 판단한다.</p>
+<p>기본 리턴값 : 0</p>
+<p>Number(); // 0</p>
+<p>Number('abc'); // NaN</p>
+
+<h1>NaN값에 대한 == 비교연산자 결과</h1>
+
+<strong>객체의 값</strong>을 비교하는 경우 좌우 각 객체의 참조하는 <strong>메모리 주소</strong>가 같은지를 비교한다.
+<p>Number.NaN; //NaN</p>
+<p>var a=parseInt('abc'), b=parseInt('abc');</p>
+<p>a==b;//false</p>
+<p>Number.NaN == Number.NaN; //false 각 객체의 주소값이 다르다. (여기서 false는 NaN이 아니라는 의미 이다)</p>
+<p>결과 이유 : == 비교 연산이 기본 타입인 number값이 Number 객체로 암시적 형변환된 후에 수행되기 때문이다.</p>
+
+
+<h1>약어</h1>
+<p>NaN : Not A Number 약자</p>
+
+$ git config --global core.editor "'C:\Program Files\Sublime Text 3\sublime_text.exe' -multiInst -nosession"
+
+""
